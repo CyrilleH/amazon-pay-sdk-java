@@ -109,9 +109,9 @@ public class Util {
 
         BufferedReader in;
         if (responseCode != 200) {
-            in = new BufferedReader(new InputStreamReader(con.getErrorStream()));
+            in = new BufferedReader(new InputStreamReader(con.getErrorStream(), "UTF-8"));
         } else {
-            in = new BufferedReader(new InputStreamReader(con.getInputStream()));
+            in = new BufferedReader(new InputStreamReader(con.getInputStream(), "UTF-8"));
         }
         String inputLine;
         StringBuffer response = new StringBuffer();
